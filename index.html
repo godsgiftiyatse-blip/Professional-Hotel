@@ -1,88 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Victor Royal Hotel & Suites</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Victor Royal Hotel & Suites</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
+
 <body>
 
-<header>
-    <div class="container">
-        <div class="logo">Victor Royal Hotel & Suites</div>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Victor Royal <span>Hotel</span></div>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#rooms">Rooms</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#rooms">Rooms</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
 </header>
 
+<!-- HERO -->
 <section class="hero" id="home">
-    <h1>Luxury. Comfort. Excellence.</h1>
-    <p>Experience premium hospitality in Delta State.</p>
-
-    <a href="https://wa.me/2348000000000" class="btn">
-        Book Now
-    </a>
+  <div class="hero-content">
+    <h1>Luxury & Comfort Redefined</h1>
+    <p>Experience world-class hospitality at Victor Royal Hotel & Suites</p>
+    <a href="#booking" class="btn">Book Now</a>
+  </div>
 </section>
 
-<section class="container" id="rooms">
-    <h2>Rooms & Suites</h2>
+<!-- BOOKING -->
+<section class="booking" id="booking">
+  <h2>Book Your Stay</h2>
 
-    <div class="grid">
-        <div class="card">
-            <h3>Standard Room</h3>
-            <p>Affordable comfort with modern amenities.</p>
-        </div>
+  <form class="booking-form">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <input type="date" required>
+    <input type="date" required>
+    <select>
+      <option>Room Type</option>
+      <option>Standard</option>
+      <option>Deluxe</option>
+      <option>Executive Suite</option>
+    </select>
+    <button type="submit">Check Availability</button>
+  </form>
+</section>
 
-        <div class="card">
-            <h3>Deluxe Room</h3>
-            <p>Elegant room with premium furnishings.</p>
-        </div>
+<!-- ABOUT -->
+<section class="about" id="about">
+  <h2>About Us</h2>
+  <p>
+    Victor Royal Hotel & Suites offers luxury accommodation, premium services, and unforgettable experiences for guests who value comfort and elegance.
+  </p>
 
-        <div class="card">
-            <h3>Executive Suite</h3>
-            <p>Luxury accommodation for VIP guests.</p>
-        </div>
+  <div class="stats">
+    <div>
+      <h3 id="stat1">0</h3>
+      <p>Rooms</p>
     </div>
-</section>
-
-<section class="container" id="services">
-    <h2>Our Services</h2>
-
-    <div class="grid">
-        <div class="card">Restaurant & Bar</div>
-        <div class="card">24/7 Electricity</div>
-        <div class="card">Conference Hall</div>
-        <div class="card">Free Wi-Fi</div>
-        <div class="card">Laundry Service</div>
-        <div class="card">Airport Pickup</div>
+    <div>
+      <h3 id="stat2">0</h3>
+      <p>Staff</p>
     </div>
+    <div>
+      <h3 id="stat3">0</h3>
+      <p>Happy Guests</p>
+    </div>
+  </div>
 </section>
 
-<section class="container" id="contact">
-    <h2>Contact Us</h2>
+<!-- ROOMS -->
+<section class="rooms" id="rooms">
+  <h2>Our Rooms</h2>
 
-    <form id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required>
+  <div class="room-grid">
+    <div class="room-card">
+      <h3>Standard Room</h3>
+      <p>Comfortable and affordable stay.</p>
+    </div>
 
-        <input type="email" id="email" placeholder="Email Address" required>
+    <div class="room-card">
+      <h3>Deluxe Room</h3>
+      <p>More space with premium comfort.</p>
+    </div>
 
-        <textarea id="message" placeholder="Your Message" required></textarea>
-
-        <button type="submit">Send Message</button>
-    </form>
+    <div class="room-card">
+      <h3>Executive Suite</h3>
+      <p>Luxury experience with full amenities.</p>
+    </div>
+  </div>
 </section>
 
+<!-- SERVICES -->
+<section class="services" id="services">
+  <h2>Our Services</h2>
+
+  <div class="service-grid">
+    <div class="service">24/7 Room Service</div>
+    <div class="service">Free WiFi</div>
+    <div class="service">Swimming Pool</div>
+    <div class="service">Restaurant & Bar</div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <h2>What Guests Say</h2>
+
+  <div class="testimonial-box">
+    <p>"Amazing experience! The rooms are clean and very comfortable."</p>
+    <h4>- Guest Review</h4>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: info@victorroyalhotel.com</p>
+  <p>Phone: +234 XXX XXX XXXX</p>
+</section>
+
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 Victor Royal Hotel & Suites. All Rights Reserved.</p>
+  <p>© 2026 Victor Royal Hotel & Suites. All Rights Reserved.</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
