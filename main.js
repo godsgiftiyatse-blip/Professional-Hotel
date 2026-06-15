@@ -1,19 +1,29 @@
-document.querySelector("form").addEventListener("submit", function(e){
+// MOBILE MENU
+function toggleMenu(){
+  const nav = document.getElementById("navLinks");
+  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+}
 
-    e.preventDefault();
+// COUNTERS
+function animateCounter(id, target){
+  let count = 0;
+  let speed = 20;
 
-    const name = document.querySelector('input[type="text"]').value;
-    const email = document.querySelector('input[type="email"]').value;
-    const message = document.querySelector("textarea").value;
+  const el = document.getElementById(id);
 
-    const text =
-`Name: ${name}
-Email: ${email}
-Message: ${message}`;
+  let interval = setInterval(() => {
+    count++;
+    el.innerText = count;
 
-    window.open(
-        `https://wa.me/2348123456789?text=${encodeURIComponent(text)}`,
-        "_blank"
-    );
+    if(count >= target){
+      clearInterval(interval);
+    }
+  }, speed);
+}
 
-});
+// RUN COUNTERS
+window.onload = () => {
+  animateCounter("stat1", 120);
+  animateCounter("stat2", 45);
+  animateCounter("stat3", 5000);
+};
